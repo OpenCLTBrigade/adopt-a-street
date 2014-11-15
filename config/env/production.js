@@ -27,7 +27,7 @@ module.exports = {
     */
   },
   app: {
-    name: 'Adopt a Street'
+    name: 'Adopt a Street',
     description: 'This Adopt-a-Street application allows you to adopt one or more streets in Charlotte, NC.'
   },
   facebook: {
