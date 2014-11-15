@@ -73,7 +73,7 @@ module.exports = function(grunt) {
         options: {
           args: [],
           ignore: ['node_modules/**'],
-          ext: 'js,html',
+          ext: 'js,html,css',
           nodeArgs: ['--debug'],
           delayTime: 1,
           cwd: __dirname
