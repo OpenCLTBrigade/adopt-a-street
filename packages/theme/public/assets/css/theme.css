@@ -92,12 +92,10 @@
 /* Docs */
 .welcome .info ul {
   padding-left:20px;
-  width:220px;
   list-style:none;
 }
 
 .welcome .info ul li {
-  width:100px;
   font-size:14px;
 }
 
@@ -132,14 +130,16 @@
   margin: 16px 0 0 53px;
 }
 
+.pdflink {
+  clear:both;
+  float:right;
+  margin: 16px 0 6px 0;
+}
+
 .morelink {
   margin: 16px 0 6px 0;
   clear:both;
   float:right;
-}
-
-.docs .morelink {
-  margin-top:30px;
 }
 
 .morelink :before {
