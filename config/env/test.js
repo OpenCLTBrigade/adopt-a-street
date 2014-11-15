@@ -5,6 +5,7 @@ module.exports = {
   port: 3001,
   app: {
     name: 'Adopt a Street'
+    description: 'This Adopt-a-Street application allows you to adopt one or more streets in Charlotte, NC.'
   },
   facebook: {
     clientID: 'APP_ID',

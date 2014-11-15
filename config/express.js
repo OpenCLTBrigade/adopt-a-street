@@ -91,6 +91,24 @@ module.exports = function(app, passport, db) {
   // Dynamic helpers
   app.use(helpers(config.app.name));
 
+  /**
+   * SEO Helpers method
+   *
+   * @param {object} app_settings
+   * @return {Function}
+   * @api public
+   * @author Van Wilson (van.wilson1992 at alumni.unc.edu)
+   */
+
+  function seo_helpers( app_settings ) {
+    return function (req, res, next) { 
+      res.locals.meta_description = app_settings.description;
+
+      next(); 
+    }
+  }
+  app.use( seo_helpers( config.app ) );
+
   // Use passport session
   app.use(passport.initialize());
   app.use(passport.session());
