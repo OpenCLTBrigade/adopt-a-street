@@ -50,22 +50,26 @@ background: url("/theme/assets/img/bg.png");
     background: #ffffff;
     box-shadow: 0 1px 3px 1px #003644;
     margin-top: 35px;
-    left: 50%;
     position: relative;
 }
 
+.form label {
+    color: #959595;
+}
+
 .main-form {
-    width: 748px;
-    height: 435px;
-    margin-left: -374px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
 }
 
 .main-form.register-form {
-    height: 622px;
+    height: auto;
 }
 
 .login-form__left {
-    width: 440px;
+    width: 60%;
     height: 100%;
     float: left;
     padding: 34px 0 0 27px;
@@ -89,8 +93,29 @@ background: url("/theme/assets/img/bg.png");
     margin-bottom: 10px;
 }
 
+.main-form .city-wrapper {
+    width: 50%;
+}
+
+.main-form .inline-wrapper {
+    float: left;
+    margin-left: 13px;
+}
+
+.main-form .inline-wrapper.first-inline-wrapper {
+    margin-left: 0;
+}
+
+.main-form .state-wrapper {
+    width: 15%;
+}
+
+.main-form .zip-wrapper {
+    width: 30%;
+}
+
 .main-form .input-wrapper input {
-    width: 401px;
+    width: 100%;
     border: 1px solid #d3d3d3;
     border-radius: 5px;
     padding: 18px 0 18px 16px;
@@ -116,7 +141,7 @@ background: url("/theme/assets/img/bg.png");
     background: url("/theme/assets/img/mail_login.png") no-repeat;
     width: 30px;
     height: 21px;
-    top: 18px;
+    bottom: 18px;
     right: 28px;
 }
 
@@ -125,7 +150,7 @@ background: url("/theme/assets/img/bg.png");
     background: url("/theme/assets/img/eye_password.png") no-repeat 50% 50%;
     width: 40px;
     height: 30px;
-    top: 16px;
+    bottom: 16px;
     right: 22px;
     cursor: pointer;
 }
@@ -292,11 +317,10 @@ background: url("/theme/assets/img/bg.png");
 .login-form__right {
     height: 100%;
     float: left;
-    width: 270px;
+    width: 35%;
     padding-left: 26px;
 }
 .login-form__right .social_wrap {
-    width: 235px;
     height: 270px;
     margin-top: 36px;
     padding-left: 0;
@@ -309,7 +333,7 @@ background: url("/theme/assets/img/bg.png");
 }
 
 .login-form__right .bigger {
-    height: 345px;
+    height: 35%;
     margin-top: 35px;
 }
 

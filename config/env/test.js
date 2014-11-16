@@ -18,8 +18,8 @@ module.exports = {
     callbackURL: 'http://localhost:3000/auth/twitter/callback'
   },
   github: {
-    clientID: 'APP_ID',
-    clientSecret: 'APP_SECRET',
+    clientID: 'DEFAULT_APP_ID',
+    clientSecret: 'DEFAULT_APP_SECRET',
     callbackURL: 'http://localhost:3000/auth/github/callback'
   },
   google: {

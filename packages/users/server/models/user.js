@@ -37,6 +37,34 @@ var validateUniqueEmail = function(value, callback) {
 var UserSchema = new Schema({
   name: {
     type: String,
+    required: false
+  },
+  firstname: {
+    type: String,
+    required: true
+  },
+  lastname: {
+    type: String,
+    required: true
+  },
+  address: {
+    type: String,
+    required: true
+  },
+  city: {
+    type: String,
+    required: true
+  },
+  state: {
+    type: String,
+    required: true
+  },
+  zip: {
+    type: String,
+    required: true
+  },
+  phone: {
+    type: String,
     required: true
   },
   email: {
