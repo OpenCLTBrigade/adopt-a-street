@@ -1,0 +1,22 @@
+<h1>List of Adoptions</h1>
+<section data-ng-controller="AdoptionsController" data-ng-init="find()">
+  <ul class="adoptions unstyled">
+    <li data-ng-repeat="adoption in adoptions">
+      <span>{{adoption.created | date:'medium'}}</span> /
+      <span>{{adoption.user.name}}</span>
+      <h2>
+        <a data-ng-href="#!/adoptions/{{adoption._id}}">{{adoption.title}}</a>
+        <span data-ng-if="hasAuthorization(adoption)">
+          <a class="btn" href="/#!/adoptions/{{adoption._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+          </a>
+          <a class="btn" data-ng-click="remove(adoption);">
+            <i class="glyphicon glyphicon-trash"></i>
+          </a>
+        </span>
+      </h2>
+      <div>{{adoption.content}}</div>
+    </li>
+  </ul>
+  <h1 data-ng-hide="!adoptions || adoptions.length">No adoptions yet. <br> Why don't you <a href="/#!/adoptions/create">Create One</a>?</h1>
+</section>
