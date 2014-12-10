@@ -16,8 +16,16 @@ angular.module('mean.adoptions').controller('AdoptionsController', ['$scope', '$
 
       if (isValid) {
         var adoption = new Adoptions({
-          title: this.title,
-          content: this.content
+          dateApproved: this.dateApproved,
+          cleanupDate: this.cleanupDate,
+          expirationDate: this.expirationDate,
+          streetLocation: this.streetLocation,
+          streetLength: this.streetLength,
+          signVerbiage: this.signVerbiage,
+          notes: this.notes,
+          status: this.status,
+          ochAcknowledgement: this.ochAcknowledgement,
+          catAcknowledgement: this.catAcknowledgement
         });
         adoption.$save(function(response) {
           $location.path('adoptions/' + response._id);

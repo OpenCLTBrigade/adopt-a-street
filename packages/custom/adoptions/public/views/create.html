@@ -1,23 +1,67 @@
 <h1>Create an Adoption</h1>
 <section data-ng-controller="AdoptionsController">
   <form name="adoptionForm" class="form-horizontal col-md-6" role="form" data-ng-submit="create(adoptionForm.$valid)" novalidate>
-    <div class="form-group" ng-class="{ 'has-error' : submitted && adoptionForm.title.$invalid }">
-      <label mean-token="'create-title'" class="col-md-3 control-label">Title</label>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && adoptionForm.dateApproved.$invalid }">
+      <label mean-token="'create-dateApproved'" class="col-md-3 control-label">Date Approved</label>
       <div class="col-md-9">
-        <input name="title" type="text" class="form-control" data-ng-model="title" id="title" placeholder="Title" required>
-        <div ng-show="submitted && adoptionForm.title.$invalid" class="help-block">
-          <p ng-show="adoptionForm.title.$error.required">Title is required</p>
+        <input name="dateApproved" type="text" class="form-control" data-ng-model="dateApproved" id="dateApproved" placeholder="">
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && adoptionForm.cleanupDate.$invalid }">
+      <label mean-token="'create-cleanupDate'" class="col-md-3 control-label">Cleanup Date</label>
+      <div class="col-md-9">
+        <input name="cleanupDate" type="text" class="form-control" data-ng-model="cleanupDate" id="cleanupDate" placeholder="">
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && adoptionForm.expirationDate.$invalid }">
+      <label mean-token="'create-expirationDate'" class="col-md-3 control-label">Expiration Date</label>
+      <div class="col-md-9">
+        <input name="expirationDate" type="text" class="form-control" data-ng-model="expirationDate" id="expirationDate" placeholder="">
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && adoptionForm.streetLocation.$invalid }">
+      <label mean-token="'create-streetLocation'" class="col-md-3 control-label">Street Location</label>
+      <div class="col-md-9">
+        <input name="streetLocation" type="text" class="form-control" data-ng-model="streetLocation" id="streetLocation" placeholder="">
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && adoptionForm.streetLength.$invalid }">
+      <label mean-token="'create-streetLength'" class="col-md-3 control-label">Street Length</label>
+      <div class="col-md-9">
+        <input name="streetLength" type="text" class="form-control" data-ng-model="streetLength" id="streetLength" placeholder="">
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && adoptionForm.signVerbiage.$invalid }">
+      <label mean-token="'create-signVerbiage'" class="col-md-3 control-label">Sign Verbiage</label>
+      <div class="col-md-9">
+        <input name="signVerbiage" type="text" class="form-control" data-ng-model="signVerbiage" id="signVerbiage" placeholder="">
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && adoptionForm.notes.$invalid }">
+      <label mean-token="'create-notes'" for="notes" class="col-md-3 control-label">Notes</label>
+      <div class="col-md-9">
+        <textarea name="notes" data-ng-model="notes" id="notes" cols="30" rows="10" placeholder="Content" class="form-control" required></textarea>
+        <div ng-show="submitted && adoptionForm.notes.$invalid" class="help-block">
+          <p ng-show="adoptionForm.notes.$error.required">Content is required</p>
         </div>
       </div>
-
     </div>
-    <div class="form-group" ng-class="{ 'has-error' : submitted && adoptionForm.content.$invalid }">
-      <label mean-token="'create-content'" for="content" class="col-md-3 control-label">Content</label>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && adoptionForm.status.$invalid }">
+      <label mean-token="'create-status'" class="col-md-3 control-label">Status</label>
       <div class="col-md-9">
-        <textarea name="content" data-ng-model="content" id="content" cols="30" rows="10" placeholder="Content" class="form-control" required></textarea>
-        <div ng-show="submitted && adoptionForm.content.$invalid" class="help-block">
-          <p ng-show="adoptionForm.content.$error.required">Content is required</p>
-        </div>
+        <input name="status" type="text" class="form-control" data-ng-model="status" id="status" placeholder="">
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && adoptionForm.ochAcknowledgement.$invalid }">
+      <label mean-token="'create-ochAcknowledgement'" class="col-md-3 control-label">OCH Acknowledgement</label>
+      <div class="col-md-9">
+        <input name="ochAcknowledgement" type="text" class="form-control" data-ng-model="ochAcknowledgement" id="ochAcknowledgement" placeholder="">
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && adoptionForm.catAcknowledgement.$invalid }">
+      <label mean-token="'create-catAcknowledgement'" class="col-md-3 control-label">CAT Acknowledgement</label>
+      <div class="col-md-9">
+        <input name="catAcknowledgement" type="text" class="form-control" data-ng-model="catAcknowledgement" id="catAcknowledgement" placeholder="">
       </div>
     </div>
     <div class="form-group">

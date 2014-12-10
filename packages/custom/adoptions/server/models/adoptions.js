@@ -14,14 +14,43 @@ var AdoptionSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  title: {
+  dateApproved: {
+    type: Date,
+  },
+  cleanupDate: {
+    type: Date,
+  },
+  expirationDate: {
+    type: Date,
+  },
+  streetLocation: {
     type: String,
     required: true,
     trim: true
   },
-  content: {
+  streetLength: {
+    type: Number,
+  },
+  signVerbiage: {
+    type: String,
+    trim: true
+  },
+  notes: {
+    type: String,
+    trim: true
+  },
+  status: {
     type: String,
     required: true,
+    default: 'Pending',
+    trim: true
+  },
+  ochAcknowledgement: {
+    type: String,
+    trim: true
+  },
+  catAcknowledgement: {
+    type: String,
     trim: true
   },
   user: {
@@ -33,11 +62,11 @@ var AdoptionSchema = new Schema({
 /**
  * Validations
  */
-AdoptionSchema.path('title').validate(function(title) {
+AdoptionSchema.path('streetLocation').validate(function(title) {
   return !!title;
 }, 'Title cannot be blank');
 
-AdoptionSchema.path('content').validate(function(content) {
+AdoptionSchema.path('status').validate(function(content) {
   return !!content;
 }, 'Content cannot be blank');
 
