@@ -24,8 +24,6 @@ angular.module('mean.adoptions').controller('AdoptionsController', ['$scope', '$
           signVerbiage: this.signVerbiage,
           notes: this.notes,
           status: this.status,
-          ochAcknowledgement: this.ochAcknowledgement,
-          catAcknowledgement: this.catAcknowledgement
         });
         adoption.$save(function(response) {
           $location.path('adoptions/' + response._id);

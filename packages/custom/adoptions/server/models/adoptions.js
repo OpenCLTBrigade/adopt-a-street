@@ -45,14 +45,6 @@ var AdoptionSchema = new Schema({
     default: 'Pending',
     trim: true
   },
-  ochAcknowledgement: {
-    type: String,
-    trim: true
-  },
-  catAcknowledgement: {
-    type: String,
-    trim: true
-  },
   user: {
     type: Schema.ObjectId,
     ref: 'User'

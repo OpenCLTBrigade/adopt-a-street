@@ -14,8 +14,6 @@
         <th>Sign Verbiage</th>
         <th>Notes</th>
         <th>Status</th>
-        <th>OCH Acknowledgement</th>
-        <th>CAT Acknowledgement</th>
         <th data-ng-if="hasAuthorization(adoption)">Actions</th>
       </tr>
     </thead>
@@ -32,8 +30,6 @@
         <td>{{adoption.signVerbiage}}</td>
         <td>{{adoption.notes}}</td>
         <td>{{adoption.status}}</td>
-        <td>{{adoption.ochAcknowledgement}}</td>
-        <td>{{adoption.catAcknowledgement}}</td>
         <td data-ng-if="hasAuthorization(adoption)">
             <a class="btn" href="/#!/adoptions/{{adoption._id}}/edit">
               <i class="glyphicon glyphicon-edit"></i>
