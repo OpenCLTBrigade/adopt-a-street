@@ -29,12 +29,6 @@ Adoptions.register(function(app, auth, database) {
     roles: ['authenticated'],
     menu: 'main'
   });
-  Adoptions.menus.add({
-    title: 'adoptions example page',
-    link: 'adoptions example page',
-    roles: ['authenticated'],
-    menu: 'main'
-  });
   
   Adoptions.aggregateAsset('css', 'adoptions.css');
 

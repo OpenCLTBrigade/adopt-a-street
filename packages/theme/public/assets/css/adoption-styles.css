@@ -1,0 +1,16 @@
+/* adoption-styles.css */
+@media (min-width: 768px) {
+  .content .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .content .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .content .container {
+    width: 1170px;
+  }
+}

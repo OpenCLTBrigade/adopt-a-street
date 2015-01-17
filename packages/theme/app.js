@@ -27,6 +27,7 @@ Theme.register(function(app, auth, database) {
   Theme.aggregateAsset('css', 'loginForms.css');
   Theme.aggregateAsset('css', 'theme.css');
   Theme.aggregateAsset('css', 'city_of_charlotte.css');
+  Theme.aggregateAsset('css', 'adoption-styles.css');
 
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above

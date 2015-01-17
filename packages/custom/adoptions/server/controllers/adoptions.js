@@ -26,11 +26,8 @@ exports.adoption = function(req, res, next, id) {
 exports.create = function(req, res) {
   var adoption = new Adoption(req.body);
   adoption.user = req.user;
-console.log ('error before here?');
   adoption.save(function(err) {
     if (err) {
-console.log ('error returned from save callback');
-console.log (err);
       return res.status(500).json( {
         error: 'Cannot save the adoption'
       });
@@ -50,7 +47,7 @@ exports.update = function(req, res) {
 
   adoption.save(function(err) {
     if (err) {
-      return res.json(500, {
+      return res.status(500).json( {
         error: 'Cannot update the adoption'
       });
     }
