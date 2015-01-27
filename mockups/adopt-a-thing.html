@@ -1,0 +1,1528 @@
+
+<!doctype html>
+<!-- NOTE: we need embed on the html element, not the body -->
+<html lang="en" class=" ">
+<head>
+  <meta charset="UTF-8">
+  <title>Home | City of Charlotte Open Data Portal</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <meta name="description" content="Discover, explore, and download open data from City of Charlotte Open Data Portal" />
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+  
+  <link rel="search" type="application/opensearchdescription+xml" title="City of Charlotte Open Data Portal" href="/opensearch.xml" />
+
+  <link type="text/css" rel="stylesheet" href="//fast.fonts.com/cssapi/4a60d16b-c9e4-404d-89d3-809adb97d65c.css"/>
+  
+  <link rel="stylesheet" href="//open-data-prod-ui.s3.amazonaws.com/1.9/styles/application.css" media="all" />
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="//open-data-prod-ui.s3.amazonaws.com/1.9/styles/application-ie.css" media="all" />
+  <![endif]-->
+
+  <script src="//open-data-prod-ui.s3.amazonaws.com/1.9/scripts/vendorhead.js"></script>
+
+  <script>
+    //normalize/shim window.performance.now
+    //NOTE: this needs to be here because we make use of it immediately below
+    window.performance = window.performance || {};
+    window.performance.now =
+           performance.now           ||
+           performance.webkitNow     ||
+           performance.msNow         ||
+           performance.oNow          ||
+           performance.mozNow        ||
+           function() { return new Date().getTime(); };
+
+    window.composerTelemetryStart = window.performance.now();
+  </script>
+
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="xt3u9MC4lzE3iFZARXQctfKXj7VeOV1qKz/5Mrz7Bl4=" name="csrf-token" />
+</head>
+
+
+<body class="page-home action-index custom-site " dir=ltr>
+
+    <header id="header">
+  <div class="container">
+    <div class="row">
+      <div id="home-link-region" class="column-16 mobile-column-24">
+
+        <div class="inner-header">
+            <a href="http://clt.charlotte.opendata.arcgis.com/" id="home-link">
+              
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+</a>
+		<div id="navigation">
+			<div id="navTitle">
+				<a href="http://charlottenc.gov"> <h6>CharlotteNC.gov</h6> </a>
+			</div>
+			<div id="widget">
+			    <a href="mailto:opencharlotte@charlottenc.gov">
+		        <div id="mailbox">
+		        	<img src="http://charlotte.maps.arcgis.com/sharing/rest/content/items/919ff4308d114b6c9bdc574346b9a3a7/data">
+					<span>MAILBOX</span>
+				</div>
+				</a>
+				<a href="http://charmeck.org/Pages/Feedback.aspx">
+				<div id="feedback">
+					<img src="http://charlotte.maps.arcgis.com/sharing/rest/content/items/03216f9d8d9b40ada1c0538c867c6af2/data">
+					<span>FEEDBACK</span>
+				</div>
+				</a>
+			</div>
+		</div>	
+	    <div id="title">
+			<div id="logoArea">
+				<div id="logo">
+					<a href='http://clt.charlotte.opendata.arcgis.com'><img id="headerLogo" src="http://charlotte.maps.arcgis.com/sharing/rest/content/items/34cdfe35f1ac46c0a13d4b58374a7c7c/data" > 
+					<div id="logoTitle"> 
+						<span class="largetitle">Open Charlotte</span>
+						<h2>City of Charlotte Open Data Portal</h2>
+					</div>
+					</a>
+				</div>
+			</div>
+			<div id="search-region">
+			    <form method="get" action="/datasets" accept-charset="UTF-8">
+    				<input id="gsearch" type="search" value="" placeholder="Search Data Content" name="q" autocomplete="off">
+    				<input id="searchButton" type="submit" value="">
+    			</form>
+			</div>
+		</div>
+		
+		
+		<div id="banner">
+			<div class="navmenu">
+				<ul>
+					<li><a href="http://charmeck.org/maps/Pages/About-Open-Data.aspx" title="">About Open Charlotte</a></li>
+					<li><a href="http://charmeck.org/maps/Pages/default.aspx" title="">Maps & Info Products</a></li>
+				</ul>
+			</div>
+			<div id="slogan">
+				<div id="sloganTitle">
+					<h1>Welcome to Open Charlotte</h1>
+				</div>
+				<div id="sloganText">
+					<h4>Providing accessible City services, operations and statistical data to promote
+						community engagement, stimulate innovation and increase productivity.</h4>	
+				</div>
+			</div>
+		</div>	
+		
+		
+	<a>
+	
+<style type='text/css'>        .services {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/523af6bf227245279358efb3b30056b5/data',
+                    sizingMethod='scale');
+                -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/523af6bf227245279358efb3b30056b5/data',
+                    sizingMethod='scale')";
+            width: 40px;
+            height: 40px;
+        }
+        
+        .arts {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/6bac6ca867a44c94a229be937cb42163/data',
+                    sizingMethod='scale');
+                -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/6bac6ca867a44c94a229be937cb42163/data',
+                    sizingMethod='scale')";
+            width: 40px;
+            height: 40px;
+        }
+        .business {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/0c863cb6d0b1488cbcf48b64fe5eea6b/data',
+                    sizingMethod='scale');
+                -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/0c863cb6d0b1488cbcf48b64fe5eea6b/data',
+                    sizingMethod='scale')";
+            width: 40px;
+            height: 40px;
+        }
+        .community {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/c825fa3ad816449ea42e0b891e21b4d6/data',
+                    sizingMethod='scale');
+                -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/c825fa3ad816449ea42e0b891e21b4d6/data',
+                    sizingMethod='scale')";
+            width: 60px;
+            height: 68px;
+        }
+        .city {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/645b435f83314340929df93e6bfbb04f/data',
+                    sizingMethod='scale');
+                -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/645b435f83314340929df93e6bfbb04f/data',
+                    sizingMethod='scale')";
+            width: 40px;
+            height: 40px;
+        }
+        .neighborhoods {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/27cd35d20f2d434286bf64f8c50d08b9/data',
+                    sizingMethod='scale');
+                -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/27cd35d20f2d434286bf64f8c50d08b9/data',
+                    sizingMethod='scale')";
+            width: 50px;
+            height: 50px;
+        }
+        .transportation {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/9aa694ab09f448b8913470862410864c/data',
+                    sizingMethod='scale');
+                -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/9aa694ab09f448b8913470862410864c/data',
+                    sizingMethod='scale')";
+            width: 70px;
+            height: 79px;
+        }
+        .environment {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/f6bd23cafcc34a1eb78d014f37ac5f41/data',
+                    sizingMethod='scale');
+                -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/f6bd23cafcc34a1eb78d014f37ac5f41/data',
+                    sizingMethod='scale')";
+            width: 70px;
+            height: 65px;
+        }
+        .demographics {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/2dd44541b0044984987e89cce7afab07/data',
+                    sizingMethod='scale');
+                -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/2dd44541b0044984987e89cce7afab07/data',
+                    sizingMethod='scale')";
+            width: 47px;
+            height: 48px;
+        }
+        .planning {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/fec38a46da1e4ac7b8350b3b9a50dc12/data',
+                    sizingMethod='scale');
+                -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/fec38a46da1e4ac7b8350b3b9a50dc12/data',
+                    sizingMethod='scale')";
+            width: 40px;
+            height: 40px;
+        }
+        .map {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/f5e26f7b3d244934bef900085e4c68da/data',
+                    sizingMethod='scale');
+                -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/f5e26f7b3d244934bef900085e4c68da/data',
+                    sizingMethod='scale')";
+            width: 60px;
+            height: 60px;
+        }
+        .historical {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/c808a54225af4595b8bea5b952db61b6/data',
+                    sizingMethod='scale');
+                -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/c808a54225af4595b8bea5b952db61b6/data',
+                    sizingMethod='scale')";
+            width: 40px;
+            height: 40px;
+        }
+        .facebook {
+            width: 30px;
+            height: 30px;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/9e1c363c1d604163b55b5e3e38ae243f/data',
+                    sizingMethod='scale');
+            -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/9e1c363c1d604163b55b5e3e38ae243f/data',
+                    sizingMethod='scale')";
+        }
+        .twitter {
+            width: 30px;
+            height: 30px;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/66278d49e905496f9e705eab444c32d7/data',
+                    sizingMethod='scale');
+            -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/66278d49e905496f9e705eab444c32d7/data',
+                    sizingMethod='scale')";
+        }
+        .youtube {
+            width: 30px;
+            height: 30px;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/6a905f211f714c16a9c97e61e41e7747/data',
+                    sizingMethod='scale');
+            -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/6a905f211f714c16a9c97e61e41e7747/data',
+                    sizingMethod='scale')";
+        }
+        .instagram {
+            width: 30px;
+            height: 30px;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/9b684ce3f1cf408eabc2c92617b99c0f/data',
+                    sizingMethod='scale');
+            -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/9b684ce3f1cf408eabc2c92617b99c0f/data',
+                    sizingMethod='scale')";
+        }
+        .pinterest {
+            width: 30px;
+            height: 30px;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/1ca27925f11a4b0ca5463a0ecd2b4329/data',
+                    sizingMethod='scale');
+            -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/1ca27925f11a4b0ca5463a0ecd2b4329/data',
+                    sizingMethod='scale')";
+        }
+        .googleplus {
+            width: 30px;
+            height: 30px;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/04f3dc4b852146c5b83feffe37b6d01b/data',
+                    sizingMethod='scale');
+            -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/04f3dc4b852146c5b83feffe37b6d01b/data',
+                    sizingMethod='scale')";
+        }
+
+
+
+
+
+
+
+
+		/***********************************************************
+									General
+		***********************************************************/
+
+
+		body,html,h1,h2,h3,h4,h5,h6,a,ul,li,span{
+			background:none;
+			border:none;
+			font-weight: normal;
+			font-family: "Open Sans";
+			color:#000;
+		}
+
+		h1{
+			font-size:14pt;
+		}
+
+		h2{
+			font-size: 12pt;
+		}
+
+		h3{
+			font-size: 10pt;
+		}
+
+		h4{
+			font-size: 10pt;
+		}
+
+		h5{
+			font-size: 8pt;
+			font-weight: bold;
+		}
+		h6{
+			color:#fff;
+			font-size: 8pt;
+		}
+
+		.largetitle{
+			font-size: 20pt;
+			font-weight: 600;
+		}
+
+
+		/***********************************************************
+									Header
+		***********************************************************/
+
+
+		#navigation{
+			width:100%;
+			height:28px;	
+			background:#006A4D;
+		}
+
+		#navTitle{
+			float:left;
+			margin:5px 30px;
+		}
+
+		#widget{
+			float:right;
+			height:28px;
+			margin-right: 50px;
+		}
+
+		#widget span{
+			font-size:7.6pt;
+			color:#fff;
+			position:relative;
+			top:-26px;
+			left:32px;
+		}
+
+		#tools{
+			float:right;
+			margin-right:10px;
+			width:20px;
+			height:28px;
+		}
+
+		#tools img{
+			padding-left: 4px;;
+			width:15px;
+		}
+
+		#mailbox{
+			margin-right:20px;
+			float:right;
+			width:40px;
+			height:15px;
+			padding:4px;
+		}
+		
+		#mailbox img{
+			padding-left: 12px;;
+			width:15px;
+		}
+		
+		#feedback{
+			margin-right:40px;
+			float:right;
+			width:40px;
+			height:15px;
+			padding:4px;
+		}
+
+		#feedback img{
+			padding-left: 12px;;
+			width:14px;
+		}
+
+		#login {
+			float:right;
+			margin-right: 50px;
+			padding-top: 6px;
+		}
+
+		#title{
+			width:1280px;
+			height:72px;
+			margin:0px auto;
+			background:#fff;
+			display:block;
+		}
+
+		#logoArea{
+			float:left;
+			height:72px;
+			width:500px;
+			position:absolute;
+		}
+        #logo{
+            float:left;
+            height:72px;
+        }
+		#headerLogo{
+			float:left;
+			margin-left:20px;
+			padding:11px;
+			height:50px;
+		}
+
+		#logoTitle{
+			float:left;
+			margin-left:10px;
+            width:300px;
+            height:52px;
+            padding-top:15px;
+		}
+
+		#logoTitle .largeTitle{
+            height:38px;
+        }
+        
+        #logoTitle h2{
+            height:22px;
+        }
+
+		#search-region{
+			float:right;
+			margin-top:30px;
+			border:1px solid #808285;
+			height:30px;
+			margin-right:25px;
+		}
+		
+	    #search-region:hover,
+	    #search-region:active,
+	    #search-region:focus{
+	        -webkit-box-shadow:0 0 1px rgba(0,0,0,0.4);
+	        -moz-box-shadow:0 0 1px rgba(0,0,0,0.4);
+	        -o-box-shadow:0 0 1px rgba(0,0,0,0.4);
+	        -ms-box-shadow:0 0 1px rgba(0,0,0,0.4);
+	        box-shadow:0 0 1px rgba(0,0,0,0.4);
+	        -webkit-transition: all 0.35s;
+		    -moz-transition: all 0.35s;
+		    -o-transition: all 0.35s;
+		    -ms-transition: all 0.35s;
+		    transition: all 0.35s;
+	    }
+	    
+		#gsearch{
+			float:left;
+			width:200px;
+			height:30px;
+			margin:0;
+			padding:7px 20px;
+			border:0px;
+		}
+
+		#searchButton{
+			float:left;
+			width:30px;
+			height:30px;
+			margin:0;
+			padding:0;
+			border:0px;
+			border-radius:0px;
+			background:url('http://charlotte.maps.arcgis.com/sharing/rest/content/items/5154993513294fba8dea6f34877d8dda/data');
+		}
+
+        input[type="search"] {
+            background:none;
+        }
+
+		#banner{
+			width:1280px;
+			height:295px;
+			margin:10px auto;
+			overflow:hidden;
+			position:relative;
+			background: url('http://charlotte.maps.arcgis.com/sharing/rest/content/items/ae5ff747758e4102933d11ad3676e011/data') center center;
+		    background-position: center center;
+		    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/ae5ff747758e4102933d11ad3676e011/data',
+                sizingMethod='scale');
+            -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                src='http://charlotte.maps.arcgis.com/sharing/rest/content/items/02cddfa1d37e427eb72c9df77fca9cd7/data',
+                sizingMethod='scale')";
+		}
+
+		#banner .navmenu{
+			width:100%;
+			height:32px;
+			filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#7F000000', endColorstr='#7F000000');
+			background: rgba(0,0,0,0.5);
+			position:absolute;
+			z-index:100;
+		}
+		
+		#banner .navmenu:not([dummy]) {
+            /* IE9 only */
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');
+        }
+
+		#banner ul{
+			list-style-type: none;
+			margin:0px auto;
+			width:430px;
+			height:32px;
+		}
+
+		#banner li{
+			display:inline-block;
+			height:20px;
+/*			padding:6px 30px;*/
+			border-left: 1px solid #fff;
+		}
+		
+		#banner li:hover{
+		    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#66000000', endColorstr='#66000000');
+		    background: rgba(0,0,0,0.4);
+		    -webkit-transition: all 0.35s;
+		    -moz-transition: all 0.35s;
+		    -o-transition: all 0.35s;
+		    -ms-transition: all 0.35s;
+		    transition: all 0.35s;
+		}
+		
+		#banner:not([dummy]) li:hover{
+            /* IE9 only */
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');
+        }
+
+		#banner a{
+			color:#fff;
+			position:relative;
+            text-decoration: none;
+			top:-2px;
+            font-size: .85em;
+            padding: 20px 20px;
+		}
+
+		#banner li + li{
+			border-right: 1px solid #fff;
+		} 
+
+
+		#slogan {
+			height:50px;
+			width:100%;
+			position:absolute;
+			bottom:0px;
+		    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#E6FFFFFF', endColorstr='#E6FFFFFF');
+			background: rgba(255,255,255,0.9);
+		}
+		
+		#slogan:not([dummy]) {
+            /* IE9 only */
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');
+        }
+
+		#sloganTitle{
+			width:47%;
+			height:30px;
+			margin:0px auto;
+			float:left;
+			border-right:1px solid #000;
+		}
+
+		#sloganTitle h1{
+            margin: 5px;
+			text-align:center;
+			font-size:18pt;
+            padding-bottom: 20px;
+		}
+
+		#sloganText{
+			width:52%;
+			float:right;
+			height:37px;
+			margin:6.5px auto;
+		}
+
+		#sloganText h4{
+            margin: 3px;
+		    padding-left: 50px;
+		}
+
+		/***********************************************************
+									Main
+		***********************************************************/
+
+		#section{
+			width:100%;
+			margin:10px auto;
+			overflow:hidden;
+			position:relative;
+		}
+
+		#breadcrumbs{
+			width:100%;
+			height:30px;
+			padding-top:10px;
+			padding-left: 20px;
+		}
+
+		#navSection{
+			width:96%;
+			margin:20px auto;
+		}
+
+/* =================================================================================
+***************** CENTER CONTENT CSS (edited by Code for Charlotte) ****************
+=================================================================================== */
+
+		.tiles {
+		    float:left;
+			width:350px;
+			margin-left: 50px;
+/*			margin-left: calc(25% - 225px);*/
+			margin-bottom: 30px;
+			position:relative;
+			background:#BDBDBD;
+			color: #2A2A2A;
+		}
+
+        .tiles.what {
+            width: 450px;
+        }
+		
+        .tiles.what img {
+            width: 400px;
+            margin:10px 25px;
+            border: 1px solid #333;
+        }   
+        
+        .tiles .inset{
+            width: 300px;          
+            margin:10px 25px;
+            background-color: #fff;
+            border: 1px solid #333;
+        }
+
+        .tiles .inset h3 {      
+            font-size: 1em;
+            text-align: center;
+        }
+
+        .tiles .inset p {
+            font-size: .85em;
+            padding: 0px 20px;
+        }
+
+		.tiles:hover{
+		    background: #939393;
+		    color:#000;
+		    cursor:pointer;
+		    -webkit-transition: all 0.35s;
+		    -moz-transition: all 0.35s;
+		    -o-transition: all 0.35s;
+		    -ms-transition: all 0.35s;
+		    transition: all 0.35s;
+	    }
+	    
+	    .tiles:active{
+	        background: #2A2A2A;
+	        color: #FFFFFF;
+	    }
+
+        .tweet {
+            color: #00aced;
+        }
+		
+		.tileIcon{
+		    width:40px;
+		    position:absolute;
+		    left:130px;
+		    bottom:20px;
+		    max-height:80px;
+		}
+		
+		.smallIcon{
+		    width:70px;
+		    bottom:-2px;
+		    left:115px;
+		}
+		
+		#businessIcon{
+		    width:45px;
+		    bottom:15px;
+		    left:125.5px;
+		} 
+		
+		#housingIcon{
+		    width:50px;
+		    left:125px;
+		    bottom:10px;
+		}
+		
+		#mapIcon{
+		    bottom: 10px;
+            left: 120px;
+            width: 60px;
+		}
+		
+		#environmentIcon{
+		    bottom:7px;
+		}
+		
+		#communityIcon{
+		    width:60px;
+		    left:120px;
+		    bottom:5px;
+	    }
+	    
+	    #demoIcon{
+	        width:48px;
+	        left:126px;
+	        bottom:15px;
+	    }
+		
+		.tiles p {
+		    text-align: center;
+		    position: relative;
+		    top: 5px;
+		    
+		    font-size:14pt;
+		}
+       
+        #sub-nav-region #sub-nav-charts{
+          display:none;
+        }
+        
+		/***********************************************************
+									Footer
+		***********************************************************/
+
+
+		#footerarea{
+			height:196px;
+			width:100%;
+			background: #414042;
+		}
+
+		#footerarea .nav{
+			float:left;
+			margin-left:10%;
+			height:196px;
+			width:48%;
+		}
+
+		#footerarea .nav ul {
+			float:left;
+			width:33%;
+			margin-top: 33px;
+		}
+
+		#footerarea .nav ul li{
+			padding-left: 50px;
+			margin-bottom: 3px;
+			color:#fff;
+			font-size:12px;
+			font-weight: normal;
+		}
+		
+		#footerarea .nav ul li a{
+			color:#fff;
+            text-decoration:none;
+		}
+
+		#footerIcons{
+			float:right;
+			margin-right: 10px;
+			padding-right:2%;
+			width:38%;
+			height:196px;
+		}
+
+		#footerLogo{
+			float:right;
+			margin-right:10px;
+			margin-top:18px;
+			padding:12px;
+			height:20px;
+		}
+
+		#socialIcons{
+			float:right;
+			margin-left:4%;
+			margin-top:30px;
+			padding:12px;
+			height:25px;
+		}
+
+        #facebook,
+        #twitter,
+        #youtube,
+        #instagram,
+        #pinterest,
+        #googleplus{
+                margin-right:10px;
+                float:left;
+            }
+
+        #socialIcons svg:hover path,
+        #socialIcons svg:hover ellipse,
+        #socialIcons svg:hover polygon{
+            fill:#bbb;
+            -webkit-transition: all 0.35s;
+		    -moz-transition: all 0.35s;
+		    -o-transition: all 0.35s;
+		    -ms-transition: all 0.35s;
+		    transition: all 0.35s;
+        }
+        
+     
+        
+		#copyright{
+			float:right;
+			margin-top:30px;
+			margin-right:30px;
+			height:46px;
+			font-size:8pt;
+			color:#fff;
+			clear:right;
+		}
+		
+		#mobileFooter{
+		    display:none;
+		}
+		
+	
+		
+		/***********************************************************
+									Override
+		***********************************************************/
+        
+        #title-bar-region{
+		    display:none;
+	    }
+	    
+		#map-bar-region{
+		    display:none;
+	    }
+	    
+	    #header {
+	        background:none;
+	        box-shadow:none;
+	    }
+	    
+	    #home-link-region{
+	        width:100%;
+	        padding:0px;
+	    }
+	    
+	    #show-banner-region{
+	        width:100%;
+	    }
+	    #banner-container{
+	        margin-top:0px;
+	        margin-left:10px;
+	        height:100px;
+	    }
+	    
+	    /*fixed the alignment issue in firefox*/
+	    
+	    #filter-by-map-extent {
+	        display:none;
+	    }
+	    
+	    #header>.container,
+	    #footer>.container{
+	        padding:0px;
+	        max-width:none;
+        }
+        
+        #footer {
+            background:none;
+        }
+
+        body {
+            overflow-x:initial;
+        }
+        
+        .map-bar-title .icon-left-arrow{
+            display:block !important;
+            visibility:visible;
+        }
+        
+
+      	/***********************************************************
+									Responsiveness
+		***********************************************************/
+
+      
+        @media only screen and (max-width: 1300px) and (min-width: 1100px){
+        
+            #title{
+                width:100%;
+            }
+            
+            #banner{
+                width:100%;
+            }
+            
+    		#footerarea .nav ul {
+			    width:49%;
+		    }
+            #facebook,
+            #twitter,
+            #youtube,
+            #instagram,
+            #pinterest,
+            #googleplus{
+                float:none;
+            }
+
+        }
+
+       @media only screen and (max-width: 1100px) and (min-width: 768px){
+            #title{
+                width:100%;
+            }
+            
+            #banner{
+                width:100%;
+            }
+            #sloganTitle h1{
+                font-size:16pt;
+                padding-top:2px;
+            }
+    		#sloganText h4{
+			    font-size:9pt;
+			    padding-left:30px;
+			    padding-top:3px;
+		    }
+            
+            .tiles{
+                margin-left: calc( 33.33% - 200px);
+            }
+            
+            #footerarea .nav ul{
+                width:45%;
+            }
+            
+            #footerarea{
+                overflow:hidden;
+            }
+            
+            #facebook,
+            #twitter,
+            #youtube,
+            #instagram,
+            #pinterest,
+            #googleplus{
+                margin-right:5px;
+                float:none;
+            }
+            
+            #copyright{
+                margin-right:18px;
+            }
+            
+            #footerLogo{
+                margin-right:0px;
+            }
+            
+        }
+        
+         @media only screen and (max-width: 930px) and (min-width: 768px){
+            #slogan{
+                height:60px;
+            }
+            #sloganTitle h1{
+                padding-top:5px;
+            }
+            #sloganText h4{
+                padding-top:0px;
+            }
+            
+         } 
+         @media only screen and (max-width: 767px){
+            #banner{
+                display:none;
+            }
+            #title{
+                width:100%;
+            }
+            #widget{
+                margin-right:25px;
+            }
+            #navTitle{
+                margin:5px 15px;
+            }
+            #logoArea{
+                position:relative;
+                height:150px;
+                width:100%;
+            }
+            #logoTitle{
+                margin-left:0px;
+            }
+            #logo{
+                margin-left: calc(50% - 150px);
+                text-align:center;
+            }
+            #headerLogo{
+                margin-left:calc(50% - 41.5px);
+            }
+            #headerLogo:after {
+                content:'';
+                display:block;
+                clear: both;
+            }
+            #logoTitle{
+                clear:both;
+            }
+            #search-region:before {
+                content:'';
+                display:block;
+                clear: both;
+            }
+            #search-region {
+                margin-right:calc(50% - 145px);
+                margin-top:10px;
+            }
+            #searchButton{
+                border-radius:0px;
+            }
+            #gsearch{
+                width:260px;
+            }
+            .tiles{
+                margin-left: calc( 50% - 150px);
+            }
+            #footerarea{
+                height:540px;
+            }
+            #footerarea .nav{
+                width:100%;
+                height:auto;
+                margin-left:0px;
+            }
+            #footerarea ul{
+                display:none;
+            }
+            #footerarea #mobileFooter{
+                display:block;
+                width:100%;
+                text-align:center;
+                margin-top:13px;
+            }
+            #footerarea #mobileFooter li{
+                font-size:11pt;
+                line-height:35pt;
+            }
+            #footerIcons{
+                margin:0px;
+                width:100%;
+                height:auto;
+                padding:0px;
+            }
+            #socialIcons{
+                margin-top:0px;
+                margin-right: calc(50% - 147.5px);
+            }
+            
+            #facebook,
+            #twitter,
+            #youtube,
+            #instagram,
+            #pinterest,
+            #googleplus{
+                float:none;
+            }
+            
+            #footerLogo{
+                display:none;
+            }
+            #copyright{
+                margin-top:15px;
+                margin-right:calc(50% - 92.5px);
+            }
+            
+            .items #dataset-download-container{
+                display:inline-block !important;
+            }
+            
+            #banner-container{
+                height:120px;
+                margin-left:0px;
+                width:100%;
+            }
+            #show-banner-region #main-message{
+                float:none;
+            }
+            .map-bar-title{
+                text-align:center;
+            }
+            #show-banner-region .map-bar-banner{
+                height:115px;
+                width:100%;
+            }
+            
+            #show_layout .container{
+                padding: 0 5px;
+            }
+
+        }
+	</style>
+</a>        </div>
+
+      </div>
+      <div id="people-navigation-region" class="column-8 mobile-column-4">
+        <div id="user-select" class="profile">
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</header>
+
+
+    <div id="title-bar-region" class="row">
+  <div id="copier"></div>
+  <div class="container" id="title-wrap">
+    <div id="global-nav-region">
+        <span id="nav-search" class="link">
+          <span id="nav-search-inner">
+            Search
+          </span>
+          <div id="search-arrow" class="link-arrow"></div>
+        </span>
+        <span id="nav-share" class="link">
+          <span id="nav-share-inner">
+            share
+          </span>
+          <div id="share-arrow" class="link-arrow"></div>
+        </span>
+        <!--span id="nav-home" class="link">
+          <span id="nav-home-inner" class="home-link">
+            Home
+          </span>
+          <div id="home-arrow" class="arrow-up link-arrow"></div>
+        </span-->
+        <div id="nav-share-popover-container">
+          <div id="nav-share-popover">
+          </div>
+        </div>
+    </div>
+
+    <div id="title-bar-inner" class="">
+      <div id="search-region">
+        <a href="/datasets?q=*" data-pjax="true" id="search-all" class="btn light small">BROWSE ALL</a>
+        <div id="search-input-wrapper">
+        <!-- <input type="text" id="gsearch" name="query" /> -->
+          <form accept-charset="UTF-8" action="/datasets" method="get"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>            <input autocomplete="off" id="gsearch" name="q" placeholder="Search for open data" size="75" type="search" value=" " />
+            <div id="click-to-search">search icon</div>
+</form>        </div>
+        <div id="search-results-extent-button-region" class="search-nav-item">
+          <div class="icon-unchecked" >&nbsp; Search Within Map</div>
+        </div>
+      </div>
+
+      <div id="refine-region">
+        <div class="container">
+          <div id="tag-region">
+            
+            
+          </div>
+        </div>
+      </div>
+
+      <div id="activities-region">
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+  <div id="map-bar-region" class="row ">
+  <div id="overlay-region"></div>
+  <div id="controls-region"></div>
+  <div id="legend-region"></div>
+  <div id="map-region">
+    <div id="info-window-container"></div>
+  </div>
+  <div id="locator-region"></div>
+  <div id="title-region" ></div>
+  <div id="progress-region" ></div>
+  <div id="navigation-region"></div>
+</div>
+
+  <div id="slide-region">
+  <div id="slide-me" class="layout">
+    <div itemscope itemtype="http://schema.org/Dataset" id="page-content" class="container row">
+      <div class="container">
+  <div id="map-carousel"></div>
+  <div class="row">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57550118-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- ============================================
+***************** CENTER CONTENT ****************
+============================================= -->
+
+<div id="section">
+		<div id="navSection">
+				
+		 <div class="tiles why" title="Why"> 
+    		<p>Why</p>
+            <div class="inset">
+                <h3>Sign-up form</h3>
+            </div>
+            <div class="inset">
+                <h3>Metrics</h3>
+                <p>By adopting the above streets, you save the City of Charlotte $### every year.
+                    <br>Thank you!
+                </p>
+            </div>
+        </div>
+		<div class="tiles what" title="What"> 
+            <p>What</p>
+            <img src="adopt-a-thing_map.png">
+        </div>
+		<div class="tiles how" title="How">
+            <p>How</p>
+            <div class="inset">
+                <h3>Featured Streets</h3>
+            </div>
+            <div class="inset">
+                <h3>Twitter</h3>
+                <p><span class="tweet">@mayorclodfelter</span>
+                <br>Thank you <span class="tweet">@CodeforCharlotte</span>
+                    for our new <span class="tweet">#adoptacitystreet</span> website!
+                </p>
+            </div>
+		</div>
+			
+
+			
+			
+			
+		</div>
+	</div><style type='text/css'></style>
+  </div>
+</div>
+
+
+
+    </div>
+  </div>
+</div>
+
+    
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div id="footerarea">
+		<div class="nav">
+			<ul>
+				<li><a href="http://charlottenc.gov">City of Charlotte</a></li>
+				<li><a href="http://charmeck.org">Charlotte & Mecklenburg County</a></li>				
+				<li><a href="http://charmeck.org/services/Pages/default.aspx">City/County Services</a></li>
+				<li><a href="http://charmeck.org/Pages/Feedback.aspx">Contact Us</a></li>
+			</ul>
+			<ul>
+				<li><a href="http://charmeck.org/maps/Pages/default.aspx">Maps & Data</a></li>
+				<li><a href="http://charmeck.org/city/charlotte/Newsroom/Pages/default.aspx">News & Media</a></li>
+				<li><a href="http://charmeck.org/Pages/LegalInformation.aspx">Legal Notices</a></li>
+			</ul>
+			<ul id="mobileFooter">
+				<li><a href="" title="">About Open Charlotte</a></li>
+				<li><a href="http://charlottenc.gov">City of Charlotte</a></li>
+				<li><a href="http://charmeck.org">Charlotte & Mecklenburg County</a></li>				
+				<li><a href="http://charmeck.org/services/Pages/default.aspx">City/County Services</a></li>
+				<li><a href="http://charmeck.org/Pages/Feedback.aspx">Contact Us</a></li>
+				<li><a href="http://charmeck.org/maps/Pages/default.aspx">Maps & Data</a></li>
+				<li><a href="http://charmeck.org/city/charlotte/Newsroom/Pages/default.aspx">News & Media</a></li>
+				<li><a href="http://charmeck.org/Pages/LegalInformation.aspx">Legal Notices</a></li>
+			</ul>
+		</div>
+		<div id="footerIcons">
+		    <div id="socialIcons">
+		    
+		    <a href="https://www.facebook.com/CharlotteNCGov" >
+		    <svg version="1.1" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="30px" height="30px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+<path d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8C16,3.581,12.418,0,8,0z M10.068,7.999L8.757,8l-0.001,4.8H6.957V8h-1.2
+	V6.346l1.2-0.001L6.955,5.371c0-1.35,0.366-2.171,1.955-2.171h1.324v1.655H9.406c-0.619,0-0.649,0.231-0.649,0.662L8.755,6.345
+	h1.488L10.068,7.999z" fill="#fff"/>
+                    <foreignObject>
+                        <div class="facebook"></div>
+                    </foreignObject>
+</svg>
+</a>
+
+<a href="https://twitter.com/charlottencgov">
+<svg version="1.1" id="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="30px" height="30px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+<path d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8C16,3.581,12.418,0,8,0z M11.98,6.204l0.006,0.255
+	c0,2.604-1.981,5.604-5.604,5.604c-1.112,0-2.147-0.326-3.019-0.885c0.154,0.018,0.311,0.028,0.47,0.028
+	c0.923,0,1.772-0.315,2.446-0.843c-0.862-0.016-1.589-0.586-1.84-1.368C4.56,9.018,4.682,9.029,4.81,9.029
+	c0.18,0,0.354-0.023,0.519-0.068c-0.901-0.182-1.58-0.977-1.58-1.931V7.005c0.266,0.148,0.569,0.236,0.892,0.247
+	C4.113,6.899,3.765,6.296,3.765,5.613c0-0.361,0.097-0.699,0.266-0.99c0.971,1.192,2.423,1.976,4.06,2.058
+	C8.057,6.537,8.04,6.386,8.04,6.232c0-1.087,0.882-1.969,1.97-1.969c0.566,0,1.078,0.239,1.438,0.622
+	c0.448-0.089,0.87-0.253,1.251-0.478c-0.147,0.46-0.459,0.846-0.866,1.09c0.397-0.047,0.778-0.154,1.131-0.31
+	C12.7,5.581,12.365,5.928,11.98,6.204z" fill="#fff"/>
+	                    <foreignObject>
+                        <div class="twitter"></div>
+                    </foreignObject>
+</svg>
+</a>
+
+<a href="https://www.youtube.com/user/CharlotteGOVchannel">
+<svg version="1.1" id="youtube" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="30px" height="30px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+<g>
+	<path d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8C16,3.581,12.418,0,8,0z M12.915,9.791
+		c-0.054,0.666-0.56,1.516-1.267,1.639c-2.264,0.176-4.949,0.154-7.295,0c-0.732-0.092-1.213-0.974-1.267-1.639
+		c-0.114-1.398-0.114-2.194,0-3.592C3.14,5.534,3.633,4.657,4.353,4.577c2.319-0.195,5.018-0.153,7.295,0
+		c0.815,0.03,1.213,0.869,1.267,1.535C13.027,7.51,13.027,8.393,12.915,9.791z" fill="#fff"/>
+	<polygon points="7,10 10,8 7,6 	" fill="#fff"/>
+</g>
+                    <foreignObject>
+                        <div class="youtube"></div>
+                    </foreignObject>
+</svg>
+</a>
+
+<a href="http://instagram.com/charlottencgov">
+<svg version="1.1" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="30px" height="30px" viewBox="0 0 100 100" enable-background="new 0 0 30 30" xml:space="preserve">
+<g>
+	<ellipse fill-rule="evenodd" clip-rule="evenodd" cx="50.069" cy="49.844" rx="14.465" ry="14.017" fill="#fff"/>
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M72.458,50.626c0,11.981-10.024,21.693-22.389,21.693
+		c-12.365,0-22.389-9.712-22.389-21.693c0-2.147,0.324-4.221,0.924-6.18h-6.616v30.427c0,1.576,1.288,2.864,2.863,2.864H75.01
+		c1.576,0,2.865-1.288,2.865-2.864V44.446h-6.341C72.133,46.405,72.458,48.479,72.458,50.626z" fill="#fff"/>
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M66.457,36.235h8.141c1.784,0,3.242-1.458,3.242-3.242v-7.762
+		c0-1.785-1.458-3.243-3.242-3.243h-8.141c-1.785,0-3.243,1.458-3.243,3.243v7.762C63.213,34.776,64.672,36.235,66.457,36.235z" fill="#fff"/>
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M50,1.125C23.007,1.125,1.125,23.007,1.125,50S23.007,98.875,50,98.875
+		S98.875,76.993,98.875,50S76.993,1.125,50,1.125z M76.769,86.015H23.231c-5.087,0-9.246-3.764-9.246-9.244V23.23
+		c0-5.481,4.159-9.245,9.246-9.245h53.538c5.086,0,9.246,3.764,9.246,9.245v53.541C86.015,82.251,81.855,86.015,76.769,86.015z" fill="#fff"/>
+</g>
+                    <foreignObject>
+                        <div class="instagram"></div>
+                    </foreignObject>
+</svg>
+</a>
+
+<a href="http://www.pinterest.com/charlottencgov/">
+<svg version="1.1" id="pinterest" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="30px" height="30px" viewBox="0 0 100 100" enable-background="new 0 0 30 30" xml:space="preserve">
+	 <g>
+<path d="M50,1.125C23.008,1.125,1.125,23.007,1.125,50S23.008,98.875,50,98.875S98.875,76.993,98.875,50S76.992,1.125,50,1.125z
+	 M55.624,66.234c-4.521,0-8.773-2.444-10.229-5.219c0,0-2.432,9.645-2.943,11.507c-1.813,6.579-7.146,13.162-7.561,13.701
+	c-0.289,0.375-0.928,0.257-0.994-0.24c-0.113-0.838-1.475-9.139,0.127-15.91c0.801-3.4,5.383-22.814,5.383-22.814
+	s-1.334-2.673-1.334-6.625c0-6.205,3.596-10.837,8.074-10.837c3.807,0,5.645,2.859,5.645,6.286c0,3.828-2.436,9.552-3.693,14.856
+	c-1.051,4.442,2.225,8.065,6.605,8.065c7.932,0,13.273-10.188,13.273-22.261c0-9.174-6.176-16.044-17.418-16.044
+	c-12.697,0-20.615,9.471-20.615,20.052c0,3.646,1.078,6.221,2.764,8.21c0.773,0.915,0.883,1.283,0.602,2.333
+	c-0.203,0.771-0.66,2.625-0.854,3.359c-0.279,1.062-1.137,1.44-2.098,1.048c-5.846-2.387-8.572-8.793-8.572-15.994
+	c0-11.893,10.029-26.154,29.922-26.154c15.986,0,26.506,11.566,26.506,23.984C78.214,53.964,69.081,66.234,55.624,66.234z" fill="#fff"/>
+	</g>
+	                    <foreignObject>
+                        <div class="pinterest"></div>
+                    </foreignObject>
+</svg>
+</a>
+
+<a href="https://plus.google.com/u/0/b/105551562394377481608/105551562394377481608/posts?pageid=105551562394377481608">
+<svg version="1.1" id="googleplus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="30px" height="30px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+<g>
+    
+	<path d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8C16,3.581,12.418,0,8,0z M5.768,13.383c-1.771,0-3.265-0.721-3.265-1.873
+		c0-1.169,1.363-2.298,3.134-2.297L6.19,9.208C5.948,8.973,5.756,8.684,5.756,8.327c0-0.212,0.068-0.415,0.162-0.596l-0.295,0.01
+		c-1.455,0-2.429-1.035-2.429-2.318c0-1.255,1.345-2.338,2.775-2.338h3.19L8.443,3.601H7.432C8.103,3.859,8.46,4.641,8.46,5.443
+		c0,0.673-0.373,1.253-0.9,1.665C7.045,7.511,6.948,7.679,6.948,8.021c0,0.292,0.552,0.788,0.84,0.993
+		c0.843,0.596,1.114,1.149,1.114,2.072C8.902,12.238,7.787,13.383,5.768,13.383z M12,7.019v1.997h-0.999V7.019H9V6h2.001V4H12v2h2
+		v1.019H12z" fill="#fff"/>
+	<path d="M6.769,9.639C6.527,9.561,6.26,9.514,5.975,9.511c-1.224-0.013-2.32,0.746-2.32,1.659c0,0.932,0.884,1.706,2.108,1.706
+		c1.721,0,2.32-0.728,2.32-1.658c0-0.112-0.014-0.222-0.039-0.329C7.91,10.361,7.433,10.1,6.769,9.639z" fill="#fff"/>
+	<path d="M7.314,5.505C7.172,4.427,6.391,3.561,5.57,3.536C4.749,3.512,4.198,4.337,4.34,5.417c0.142,1.079,0.923,1.974,1.745,1.998
+		C6.905,7.44,7.457,6.585,7.314,5.505z" fill="#fff"/>
+</g>
+                    <foreignObject>
+                        <div class="googleplus"></div>
+                    </foreignObject>
+</svg>
+</a>
+
+
+</div>
+			<div id="copyright"> &copy; 2014 City of Charlotte Government</div>
+			<img id="footerLogo" src="http://charlotte.maps.arcgis.com/sharing/rest/content/items/f5668ebe9f7f4a87a6c67ac73700fae3/data" >
+		</div>
+			
+	</div><style type='text/css'></style>
+      </div>
+    </footer>
+
+<!--
+<footer id="sub-footer" >
+  <div class="container">
+    <div class="row" >
+      <div class="column-12">
+        <a href="">Powered by ArcGIS for Open Data</a>
+        | 2cab5f5
+        | deploy 
+        | January 8th, 2015 20:55 
+      </div>
+    </div>
+  </div>
+</footer>
+ -->
+
+
+  <!-- loading this down here to improve page load
+  this isn't used until the js below is loaded -->
+  <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.11/esri/css/esri.css">
+
+  <!--[if lte IE 8]>
+    <script src="//open-data-prod-ui.s3.amazonaws.com/1.9/scripts/vendor-ie.min.js"></script>
+  <![endif]-->
+  <!--[if gte IE 9]>-->
+    <script src="//open-data-prod-ui.s3.amazonaws.com/1.9/scripts/vendor.min.js"></script>
+  <!--<![endif]-->
+
+  <script src="//open-data-prod-ui.s3.amazonaws.com/1.9/scripts/composer-ui.min.js">
+
+  <script type="text/javascript">
+    I18n.defaultLocale = "en";
+    I18n.locale = "en";
+    I18n.fallbacks = true;
+  </script>
+
+  <script>
+  $(function() {
+    var siteConfiguration = {"site_info":{"title":"City of Charlotte Open Data Portal","default_extent":{"type":"extent","xmin":-9047747.64905198,"ymin":4159832.1801534034,"xmax":-8947715.954625146,"ymax":4235183.857526272,"spatialReference":{"wkid":102100}},"mapbar_enabled":true,"flags":{"map_carousel":false,"charts":true,"large_dataset_extent":false,"activities":true},"map":{"basemaps":{"type":"default","primary":{"label":"Map","title":"Light Gray Canvas","baseMapLayers":[{"url":"http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer"},{"url":"http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer","isReference":true}]},"secondary":{"enabled":true,"label":"Satellite","title":"National Geographic","baseMapLayers":[{"url":"http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"}]}}},"default_license":"No default license specified"}};
+
+    // //currently the siteInfo serializer returns a top-level object of "site_info", but
+    // //we want that passed into the app as site, so minor juggling here
+    if(siteConfiguration.site_info){
+      siteConfiguration = siteConfiguration.site_info;
+    }
+    //extend the site over ComposerConfig
+    var options = $.extend(ComposerConfig, {site: siteConfiguration });
+
+    var localizr = new util.Localizr(_);
+        localizr.localize()
+          .always(function () {
+            Composer.create(options);
+          });
+  });
+
+</script>
+
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', "UA-47337822-2", 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+</body>
+</html>
