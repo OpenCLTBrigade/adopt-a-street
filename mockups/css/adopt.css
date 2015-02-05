@@ -544,6 +544,7 @@
 			background:#BDBDBD;
 			color: #2A2A2A;
 			padding-bottom: 20px;
+			border-radius: 10px;
 		}
 		
 		.tiles p {
@@ -569,6 +570,7 @@
             padding-bottom: 25px;
             background-color: #fff;
             border: 1px solid #333;
+            border-radius: 10px;
         }
 
         .tiles .inset h3 {      
@@ -606,6 +608,59 @@
 	    .streets p {
 	    	text-align: left;
 	    }
+
+/* ==================
+>> STREETS ELEMENTS
+=================== */
+		
+		#streets {
+			padding-left: 45px;
+		}
+
+		#streets ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		#streets ul li {
+			background: url('../images/street-bullet.gif') no-repeat left center;
+			padding-left: 55px;
+			padding-top: 7px;
+			height: 30px;
+			display: block;
+		}
+		
+
+/* ==================
+>> MAP AREA ELEMENTS
+=================== */
+		
+		#map-menu {
+			position:relative;
+ 		   	position:absolute;
+ 		   	margin-left: 35px;
+ 		   	margin-top: 356px;
+ 		   	border-radius: 10px;
+		}
+
+		#map img {			
+ 		   	border-radius: 10px;
+		}
+
+		#map ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		#map ul li {
+ 			display: inline;
+ 			padding: 5px 10px;
+ 			margin-right: 5px;
+			background-color: #b4da55;
+			font-size: .85em;
+		}
 
 /* ==================
 SIGN-UP FORM ELEMENTS
