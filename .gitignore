@@ -15,3 +15,9 @@
 /log/*
 !/log/.keep
 /tmp
+
+.bower-cache/
+.bower-registry/
+bower_components/
+node_modules/
+packages/
