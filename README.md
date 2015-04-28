@@ -1,24 +1,22 @@
-How to clone a repo (download stuff)
+# Adopt a Street
 
-Terminal:
+We've switched to [Ruby on Rails](http://rubyonrails.org/)!
 
-cd to adopt a node directory
-ls -la (-l = list, a = hidden)
+- Catch up on the project here: [Project: Adopt-a-“Thing”](http://forum.codeforcharlotte.org/t/project-adopt-a-thing/212)
+- View project todos here: [Waffle.io](https://waffle.io/codeforcharlotte/adopt_a_node).
 
-git status
-git checkout .
-git branch
-git checkout master
-git pull
+### Getting Started
 
-npm install
-grunt
+**Note:** All the assets from the Node version should be in `public/old-code/`.
 
-mongod
+- Install [Ruby on Rails](http://rubyonrails.org/)
+- Open your Terminal and run `rails server` to boot up the server
+- View the site at `http://localhost:3000/`
 
-localhost:3000
+For more help with Rails, [check out the site](http://rubyonrails.org/).
 
-How to push to the repo:
-git add .
-git commit -m "type here to describe the changes you made"
-git push
+### Stuff to add to the README
+
+- What is ERB?
+- How to handle assets (¿Cómo se dice SASS?)
+- Helpful resources for Rails
