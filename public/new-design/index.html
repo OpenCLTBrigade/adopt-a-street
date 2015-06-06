@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Adopt-A-Street</title>
+  </head>
+
+  <body ng-app='AdoptAStreet'>
+    <div ng-controller='MainCtrl' class="wrapper">
+      <header>
+        <h1>Adopt-A-Street</h1>
+      </header>
+
+      <main>
+        <p>Enter an address. We will show you all adoptable streets nearby</p>
+        <input type="text" ng-model="model.address" placeholder="600 E Trade st." />
+        <button ng-click="skip">Skip to the map</button>
+        <a href="#">What are my responsibilities</a>
+      </main>
+    </div>
+
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="javascripts/app.js"></script>
+
+    <script src="javascripts/controllers/MainController.js"></script>
+  </body>
+</html>
