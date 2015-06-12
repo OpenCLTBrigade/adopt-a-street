@@ -1,0 +1,72 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Salutation:</strong>
+  <%= @user.salutation %>
+</p>
+
+<p>
+  <h3>Primary Contact</h3>
+  <strong>First name:</strong>
+  <%= @user.primary_first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user.primary_last_name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @user.primary_phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.primary_email %>
+</p>
+<br>
+
+<p>
+  <strong>Salutation:</strong>
+  <%= @user.salutation %>
+</p>
+
+<p>
+  <h3>Secondary Contact</h3>
+  <strong>First name:</strong>
+  <%= @user.secondary_first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user.secondary_last_name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @user.secondary_phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.secondary_email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @user.address %>
+</p>
+
+<p>
+  <strong>Originization:</strong>
+  <%= @user.originization %>
+</p>
+
+<p>
+  <strong>Phone type:</strong>
+  <%= @user.phone_type %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

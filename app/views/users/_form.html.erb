@@ -1,0 +1,93 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <h3>Primary Contact</h3>
+
+   <div class="field">
+    <p>Orginization</p>
+    <%= f.text_field :originization %>
+  </div>
+
+  <div class="field">
+    <%= f.label :salutation %><br>
+    <%= f.check_box :salutation %>
+  </div>
+
+  <div class="field">
+    <p>First Name</p>
+    <%= f.text_field :primary_first_name %>
+  </div>
+
+  <div class="field">
+    <p>Last Name</p>
+    <%= f.text_field :primary_last_name %>
+  </div>
+
+  <div class="field">
+    <p>Phone</p>
+    <%= f.text_field :primary_phone %>
+  </div>
+
+  <div class="field">
+    <p>Email</p>
+    <%= f.text_field :primary_email %>
+  </div>
+
+    <div class="field">
+    <p>Address</p>
+    <%= f.text_field :address %>
+  </div>
+
+   <div class="field">
+    <%= f.label :phone_type %><br>
+    <%= f.check_box :phone_type %>
+  </div>
+
+  <br>
+
+  <h3>Secondary Contact</h3>
+
+  <div class="field">
+    <%= f.label :salutation %><br>
+    <%= f.check_box :salutation %>
+  </div>
+
+  <div class="field">
+    <p>First Name</p>
+    <%= f.text_field :secondary_first_name %>
+  </div>
+  <div class="field">
+    <p>Last Name</p>
+    <%= f.text_field :secondary_last_name %>
+  </div>
+  
+  <div class="field">
+    <p>Phone</p>
+    <%= f.text_field :secondary_phone %>
+  </div>
+  
+  <div class="field">
+    <p>Email</p>
+    <%= f.text_field :secondary_email %>
+  </div>
+ 
+  <div class="field">
+    <%= f.label :phone_type %><br>
+    <%= f.check_box :phone_type %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
