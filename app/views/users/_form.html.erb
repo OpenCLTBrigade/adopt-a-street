@@ -20,7 +20,7 @@
 
   <div class="field">
     <%= f.label :salutation %><br>
-    <%= f.check_box :salutation %>
+    <%= f.select :salutation, options_for_select(%w[Dr. Mr. Mrs. Ms.]) %>
   </div>
 
   <div class="field">
@@ -50,7 +50,7 @@
 
    <div class="field">
     <%= f.label :phone_type %><br>
-    <%= f.check_box :phone_type %>
+    <%= f.select :phone_type, options_for_select(%w[Home Work Cell]) %>
   </div>
 
   <br>
@@ -59,7 +59,7 @@
 
   <div class="field">
     <%= f.label :salutation %><br>
-    <%= f.check_box :salutation %>
+    <%= f.select :salutation, options_for_select(%w[Dr. Mr. Mrs. Ms.]) %>
   </div>
 
   <div class="field">
@@ -83,7 +83,7 @@
  
   <div class="field">
     <%= f.label :phone_type %><br>
-    <%= f.check_box :phone_type %>
+    <%= f.select :phone_type, options_for_select(%w[Home Work Cell]) %>
   </div>
 
   <div class="actions">
