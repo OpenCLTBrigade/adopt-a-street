@@ -1,16 +1,15 @@
-# Adopt a Street
+# Adopt A Street
 
-We've switched to [Ruby on Rails](http://rubyonrails.org/)!
+**Note:** The project repository has been renamed to "adopt-a-street". Be sure to update your local remote! See details here: https://github.com/CodeForCharlotte/adopt-a-street/issues/29#issuecomment-138721050
 
 - Catch up on the project here: [Project: Adopt-a-“Thing”](http://forum.codeforcharlotte.org/t/project-adopt-a-thing/212)
-- View project todos here: [Waffle.io](https://waffle.io/codeforcharlotte/adopt_a_node).
+- View project todos here: [Waffle.io](https://waffle.io/codeforcharlotte/adopt-a-street).
 
 ### Getting Started
 
 **Note:** All the assets from the Node version should be in `public/old-code/`.
 
 - Install [Ruby on Rails](http://rubyonrails.org/)
-- 
 - Open your Terminal and run `rails server` to boot up the server
 - View the site at `http://localhost:3000/`
 
