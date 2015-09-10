@@ -11,7 +11,7 @@
 
 - Install [NodeJS](https://nodejs.org/en/)
 - Open your terminal and run `npm install` to install all server dependencies.
-- Then run `sails lift` to to start the server.
+- Then run `sails lift` to start the server.
 - View the site at `http://localhost:8080/`
 
 #### In Windows
