@@ -23,11 +23,11 @@ The same as above, but you may need to add NPM & NodeJS to your path
  1. Open "Control Panel" > Type "system" into the search > Click on "Edit the system environment variables"
  2. In the window that shows up click "Environment Variables..." (Towards the end of the window).
  3. Under "User variables for {username}" > Select the "Path" variable > Click "Edit...".
- 4. At the end of the text add: ";C:\Users\{username}\AppData\Roaming\npm"
+ 4. At the end of the text add: `;C:\Users\{username}\AppData\Roaming\npm`
 
 ##### Creating NODE_PATH Variable
 **(Replace {username} with your computer username.)**
  1. Open "Control Panel" > Type "system" into the search > Click on "Edit the system environment variables"
  2. In the window that shows up click "Environment Variables..." (Towards the end of the window).
  3. Under "User variables for {username}" > Click "new..."
- 4. In Variable name, put "NODE_PATH" . in Variable value, put "%USERPROFILE%\Application Data\npm\node_modules" (Including the quotes)
+ 4. In Variable name, put "NODE_PATH" . in Variable value, put `"%USERPROFILE%\Application Data\npm\node_modules"` (Including the quotes)
