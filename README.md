@@ -9,28 +9,25 @@
 
 **Note:** All the assets from the Node version should be in `public/old-code/`.
 
-- Install [Ruby on Rails](http://rubyonrails.org/)
-- Open your Terminal and run `rails server` to boot up the server
-- View the site at `http://localhost:3000/`
+- Install [NodeJS](https://nodejs.org/en/)
+- Open your terminal and run `npm install` to install all server dependencies.
+- Then run `sails lift` to to start the server the server.
+- View the site at `http://localhost:8080/`
 
 #### In Windows
-Using [chocolatey](https://chocolatey.org/) get ruby, ruby dev kit (needed for json) and sqlite. From an admin command prompt run the following:
 
-- choco install ruby
-- choco install ruby2.devkit
-- choco install sqlite
+The same as above, but you may need to add NPM & NodeJS to your path
 
-Update the devkit config file in order for it to find ruby. Open a command prompt with ruby, navigate to your cloned project directory for this project, and run:
+##### Adding NPM To your Path
+**(Replace {username} with your computer username.)**
+ 1. Open "Control Panel" > Type "system" into the search > Click on "Edit the system environment variables"
+ 2. In the window that shows up click "Environment Variables..." (Towards the end of the window).
+ 3. Under "User variables for {username}" > Select the "Path" variable > Click "Edit...".
+ 4. At the end of the text add: ";C:\Users\{username}\AppData\Roaming\npm"
 
-- gem install rails
-- bundle install
-- rails server
-
-
-For more help with Rails, [check out the site](http://rubyonrails.org/).
-
-### Stuff to add to the README
-
-- What is ERB?
-- How to handle assets (¿Cómo se dice SASS?)
-- Helpful resources for Rails
+##### Creating NODE_PATH Variable
+**(Replace {username} with your computer username.)**
+ 1. Open "Control Panel" > Type "system" into the search > Click on "Edit the system environment variables"
+ 2. In the window that shows up click "Environment Variables..." (Towards the end of the window).
+ 3. Under "User variables for {username}" > Click "new..."
+ 4. In Variable name, put "NODE_PATH" . in Variable value, put "%USERPROFILE%\Application Data\npm\node_modules" (Including the quotes)
