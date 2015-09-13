@@ -9,13 +9,106 @@
     <style>
       body { margin:0; padding:0; }
       #map { position:absolute; top:0; bottom:0; width:100%; }
+
+      pre.ui-distance {
+        position:absolute;
+        bottom:10px;
+        left:10px;
+        padding:5px 10px;
+        background:rgba(0,0,0,0.5);
+        color:#fff;
+        font-size:11px;
+        line-height:18px;
+        border-radius:3px;
+        }
     </style>
   </head>
   <body>
+
     <div id='map'></div>
+    <pre id='distance' class='ui-distance'>Click to place a marker</pre>
+
+
     <script>
-      L.mapbox.accessToken = 'pk.eyJ1Ijoic3RhdGljaW50ZWdlciIsImEiOiJlNThkMTBkYzhjODlkNTQ2MmI4OGY5ZTIxYTllYWZlZiJ9.tQmTzcKD7lxPPnv_7gTlkQ';
-      var map = L.mapbox.map('map', 'mapbox.streets').setView([35.2356117,-80.8488496], 15);
+    L.mapbox.accessToken = 'pk.eyJ1IjoiYnlyZCIsImEiOiJjaWVpM2JrYnEwMGk5czZtMTNlMjB2cHFoIn0.ZHXd1umkmcRlYxM_VZwdpA';
+    var map = L.mapbox.map('map', 'mapbox.streets').setView([35.2356117,-80.8488496], 15);
+
+    // Create a featureLayer that will hold a marker and linestring.
+    var featureLayer = L.mapbox.featureLayer().addTo(map);
+
+    bothCoordinates = []
+
+    map.on('click', function(ev) {
+
+        var c = ev.latlng;
+
+          var geojson =
+            {
+              "type": "Feature",
+              "geometry": {
+                "type": "Point",
+                "coordinates": [c.lng, c.lat]
+              },
+              "properties": {
+                "marker-color": "#ff8888"
+              }
+            }
+
+        featureLayer.setGeoJSON(geojson);
+
+        bothCoordinates.push(c)
+
+        if(bothCoordinates.length == 2){
+          displayLine()
+          bothCoordinates.length = 0
+        }
+      })
+
+    function displayLine(){
+          var firstMarker = bothCoordinates[0]
+          var secondMarker = bothCoordinates[1]
+          var geojson = [
+            {
+              "type": "Feature",
+              "geometry": {
+                "type": "Point",
+                "coordinates": [firstMarker.lng, firstMarker.lat]
+              },
+              "properties": {
+                "marker-color": "#ff8888"
+              }
+            },{
+              "type": "Feature",
+              "geometry": {
+                "type": "Point",
+                "coordinates": [secondMarker.lng, secondMarker.lat]
+              },
+              "properties": {
+                "marker-color": "#ff8888"
+              }
+            }, {
+              "type": "Feature",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [firstMarker.lng, firstMarker.lat],
+                  [secondMarker.lng, secondMarker.lat]
+                ]
+              },
+              "properties": {
+                "stroke": "#000",
+                "stroke-opacity": 0.5,
+                "stroke-width": 4
+              }
+            }
+          ];
+
+          featureLayer.setGeoJSON(geojson);
+
+          var container = document.getElementById('distance');
+          container.innerHTML = (firstMarker.distanceTo(secondMarker)).toFixed(0) + 'm';
+      }
+
     </script>
   </body>
 </html>
