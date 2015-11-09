@@ -1,11 +1,23 @@
 # Adopt A Street
 
-**Important:** The project repository has been renamed to "adopt-a-street". Be sure to update your local remote! See details here: https://github.com/CodeForCharlotte/adopt-a-street/issues/29#issuecomment-138721050
-
 - Catch up on the project here: [Project: Adopt-a-“Thing”](http://forum.codeforcharlotte.org/t/project-adopt-a-thing/212)
 - View project todos here: [Waffle.io](https://waffle.io/codeforcharlotte/adopt-a-street).
 
-## Getting Started
+## Data
+
+### Requirements
+
+- spatialite-tools: http://www.gaia-gis.it/gaia-sins/
+- ogr2ogr: http://www.gdal.org/index.html
+
+### How to
+
+- Download Shapefile from: http://clt.charlotte.opendata.arcgis.com/datasets?q=neighborhoods
+- Convert Shapefile to GeoJSON: `ogr2ogr -f geojson assets/data/Street_Adoption.json Street_Adoption.shp`
+- Create sqlite database: `spatialite db/db.sqlite < db/schema.txt`
+- Import Shapefile: `spatialite_tool -i -shp Street_Adoption -d db/db.sqlite -c UTF-8 -t streets_import`
+
+## Getting Started With NodeJS and Sails
 
 - Install [NodeJS](https://nodejs.org/en/).
 - Install [SailsJS](http://sailsjs.org/get-started) with `npm -g install sails`.
