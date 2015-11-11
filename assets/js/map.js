@@ -31,12 +31,31 @@ function LineString(points, props){
 
 function Adoptable(map, data_url, infoDiv){
     this.map = map;
-    this.layer = L.mapbox.featureLayer().addTo(map);
+    this.selectionLayer = L.mapbox.featureLayer().setZIndex(1).addTo(map);
+    this.highlightLayer = L.mapbox.featureLayer().setZIndex(2).addTo(map);
+    this.streetLayer = L.mapbox.featureLayer().setZIndex(3).addTo(map);
+    this.selection = [];
+    this.selectionTotalMiles = 0;
+
     this.data = [];
     this.infoDiv = infoDiv;
 
+    this.highlightProps = {
+        stroke: "#1010ff",
+        'stroke-opacity': 0.30,
+        'stroke-width': 10
+    };
+
+    this.selectionProps = {
+        stroke: "#10ff10",
+        'stroke-opacity': 0.30,
+        'stroke-width': 10
+    };
+
     var self = this;
-    this.layer.on('mouseover', function(ev){ return self.onmouseover(ev); });
+    this.streetLayer.on('mouseover', function(ev){ return self.onmouseover(ev); });
+    this.streetLayer.on('mouseout', function(ev){ return self.onmouseout(ev); });
+    this.streetLayer.on('click', function(ev){ return self.onclick(ev); });
 
     $.getJSON(data_url, function(data) {
         if(data.type != "FeatureCollection") {
@@ -57,21 +76,69 @@ Adoptable.prototype.showData = function(){
             type: it.type,
             geometry: it.geometry,
             properties: {
-                desc: it.properties.BEG_DESC,
-                len_m: it.properties.TOT_MIa,
+                data: it.properties,
                 stroke: (it.properties.FY_REPORTE ? "#f47a00" : "#cc0052"),
                 'stroke-opacity': 0.25,
                 'stroke-width': 8
             }
         });
     }
-    this.layer.setGeoJSON(out);
+    this.streetLayer.setGeoJSON(out);
 };
+
+Adoptable.prototype.showSelection = function(){
+    this.selectionLayer.setGeoJSON(this.selection);
+    var miles = 0;
+    for(var i = 0; i < this.selection.length; i++){
+        miles += this.selection[i].properties.data.TOT_MIa;
+    }
+    
+    this.selectionTotalMiles = miles.toFixed(2);
+}
+
+function describeStreetPart(data){
+    try {
+        return (data.WHOLESTNAM +
+                " (between " + data.BEG_DESC + " and " + data.END_DESC + ", " +
+                data.TOT_MIa + "mi)");
+    } catch(e) {
+        return "ERROR"
+    }
+}
 
 Adoptable.prototype.onmouseover = function(ev){
     if(ev.layer.feature){
-        $(this.infoDiv).text(ev.layer.feature.properties.desc + ": " + ev.layer.feature.properties.len_m + "km");
+        $(this.infoDiv).text(describeStreetPart(ev.layer.feature.properties.data));
+        this.highlightLayer.setGeoJSON($.extend(
+            true, {},
+            ev.layer.feature,
+            {properties: this.highlightProps}
+        ));
     }
+}
+
+Adoptable.prototype.onmouseout = function(ev){
+    this.highlightLayer.setGeoJSON([]);
+    $(this.infoDiv).text(this.selection.length + " street parts selected, totaling " + this.selectionTotalMiles + "mi");
+};
+
+Adoptable.prototype.onclick = function(ev){
+    console.log('click', ev);
+    var feature = ev.layer.feature;
+    for(var i = 0; i < this.selection.length; i++){
+        if(feature.properties.data.OBJECTID == this.selection[i].properties.data.OBJECTID){
+            this.selection.splice(i, 1);
+            this.showSelection();
+            return;
+        }
+    }
+    this.selection.push($.extend(
+        true, {},
+        feature,
+        {properties: this.selectionProps}
+    ));
+    this.highlightLayer.setGeoJSON([]);
+    this.showSelection();
 }
 
 initMap();
