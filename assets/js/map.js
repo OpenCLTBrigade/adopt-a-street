@@ -4,55 +4,8 @@ function initMap(){
 
     var map = L.mapbox.map('map', 'mapbox.streets').setView([35.2356117,-80.8488496], 15);
     var infoDiv = document.getElementById('distance');
-    new Selection(map, infoDiv);
     new Adoptable(map, data_url, infoDiv);
 }
-
-function Selection(map, infoDiv){
-    this.infoDiv = infoDiv;
-    this.layer = L.mapbox.featureLayer().addTo(map);
-    this.coordinates = [];
-    this.pointProps = {
-        "marker-color": "#ff8888"
-    };
-    this.lineProps = {
-        "stroke": "#000",
-        "stroke-opacity": 0.5,
-        "stroke-width": 4
-    };
-    var self = this;
-    map.on('click', function(){ self.onClick.apply(self, arguments); });
-}
-
-Selection.prototype.onClick = function(ev) {
-    var c = ev.latlng;
-
-    this.coordinates.push(c);
-
-    if(this.coordinates.length == 2){
-        this.displaySelectedLine();
-        this.coordinates.length = 0;
-    }else{
-        var geojson = Point(c.lng, c.lat, this.pointProps);
-        this.layer.setGeoJSON(geojson);
-    }
-};
-
-Selection.prototype.displaySelectedLine = function(){
-    var firstMarker = this.coordinates[0];
-    var secondMarker = this.coordinates[1];
-    var geojson = [
-        Point(firstMarker.lng, firstMarker.lat, this.pointProps),
-        Point(secondMarker.lng, secondMarker.lat, this.pointProps),
-        LineString([[firstMarker.lng, firstMarker.lat],
-              [secondMarker.lng, secondMarker.lat]],
-             this.lineProps)
-    ];
-
-    this.layer.setGeoJSON(geojson);
-
-    this.infoDiv.innerHTML = (firstMarker.distanceTo(secondMarker)).toFixed(0) + 'm';
-};
 
 function Point(lng, lat, props){
     return {
@@ -89,6 +42,7 @@ function Adoptable(map, data_url, infoDiv){
         if(data.type != "FeatureCollection") {
             throw "failed to load adoptable map data";
         }
+        $(this.infoDiv).text("Loaded map data.")
         self.data = data;
         self.showData();
     });
