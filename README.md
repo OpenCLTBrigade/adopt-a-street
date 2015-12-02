@@ -1,36 +1,56 @@
 # Adopt A Street
 
-**Note:** The project repository has been renamed to "adopt-a-street". Be sure to update your local remote! See details here: https://github.com/CodeForCharlotte/adopt-a-street/issues/29#issuecomment-138721050
-
 - Catch up on the project here: [Project: Adopt-a-“Thing”](http://forum.codeforcharlotte.org/t/project-adopt-a-thing/212)
 - View project todos here: [Waffle.io](https://waffle.io/codeforcharlotte/adopt-a-street).
 
-### Getting Started
+## Getting Started With NodeJS and Sails
 
-**Note:** All the assets from the Node version should be in `public/old-code/`.
+- Install [NodeJS](https://nodejs.org/en/).
+- Install [SailsJS](http://sailsjs.org/get-started) with `npm -g install sails`.
+- Run `npm install` to install the rest of the project's dependencies.
+- Run `sails lift` to start the server.
+- View the site at `http://localhost:1337/`.
 
-- Install [Ruby on Rails](http://rubyonrails.org/)
-- Open your Terminal and run `rails server` to boot up the server
-- View the site at `http://localhost:3000/`
+### In Windows
 
-#### In Windows
-Using [chocolatey](https://chocolatey.org/) get ruby, ruby dev kit (needed for json) and sqlite. From an admin command prompt run the following:
+The same as above, but you may need to add NPM & NodeJS to your path
 
-- choco install ruby
-- choco install ruby2.devkit
-- choco install sqlite
+#### Adding NPM To your Path
 
-Update the devkit config file in order for it to find ruby. Open a command prompt with ruby, navigate to your cloned project directory for this project, and run:
+**(Replace {username} with your computer username.)**
 
-- gem install rails
-- bundle install
-- rails server
+1. Open "Control Panel" > Type "system" into the search > Click on "Edit the system environment variables"
+2. In the window that shows up click "Environment Variables..." (Towards the end of the window).
+3. Under "User variables for {username}" > Select the "Path" variable > Click "Edit...".
+4. At the end of the text add: `;C:\Users\{username}\AppData\Roaming\npm`
 
+#### Creating NODE_PATH Variable
 
-For more help with Rails, [check out the site](http://rubyonrails.org/).
+**(Replace {username} with your computer username.)**
 
-### Stuff to add to the README
+1. Open "Control Panel" > Type "system" into the search > Click on "Edit the system environment variables"
+2. In the window that shows up click "Environment Variables..." (Towards the end of the window).
+3. Under "User variables for {username}" > Click "new..."
+4. In Variable name, put "NODE_PATH" . in Variable value, put `"%USERPROFILE%\Application Data\npm\node_modules"` (Including the quotes)
 
-- What is ERB?
-- How to handle assets (¿Cómo se dice SASS?)
-- Helpful resources for Rails
+## Generating Street Data
+
+### Requirements
+
+- spatialite-tools: http://www.gaia-gis.it/gaia-sins/
+- ogr2ogr: http://www.gdal.org/index.html
+
+On Mac, install via [Homebrew](http://brew.sh/):
+
+```
+brew install gdal libspatialite spatialite-tools spatialite-gui
+```
+
+**Note**: `ogr2ogr` is part of the GDAL package.
+
+### How to
+
+- Download the "Street Adoption" Shapefile from: http://clt.charlotte.opendata.arcgis.com/datasets?q=neighborhoods
+- Convert Shapefile to GeoJSON: `ogr2ogr -f geojson assets/data/Street_Adoption.json Street_Adoption.shp`
+- Create sqlite database: `spatialite db/db.sqlite < db/schema.txt`
+- Import Shapefile: `spatialite_tool -i -shp Street_Adoption -d db/db.sqlite -c UTF-8 -t streets_import`
